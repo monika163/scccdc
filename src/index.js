@@ -46,10 +46,10 @@ const adminOrderRoutes = require("./routes/adminOrder.routes.js");
 app.use("/api/admin/orders", adminOrderRoutes);
 
 //static files
-app.use(express.static(path.join(__dirname, "./frontend/build")));
+app.use(express.static(path.join(__dirname, "../frontend/build")));
 
 app.get("*", function (req, resp) {
-  resp.sendFile(path.join(__dirname, "./frontend/build/index.html"));
+  resp.sendFile(path.join(__dirname, "../frontend/build/index.html"));
 });
 
 module.exports = { app };
